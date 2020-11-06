@@ -8,6 +8,7 @@ const Container = styled.SafeAreaView`
 `;
 const List = styled.FlatList`
   flex: 1;
+  background-color: #202024;
 `;
 
 export default () => {
@@ -15,9 +16,7 @@ export default () => {
     <Container>
       <List
         data={list}
-        renderItem={({item}) => {
-          <ListItem data={item} />;
-        }}
+        renderItem={({item}) => <ListItem data={item} />}
         keyExtractor={(item) => item.id}
       />
     </Container>
